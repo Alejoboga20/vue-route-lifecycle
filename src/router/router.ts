@@ -1,6 +1,6 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router';
 
-const routes = [
+const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
 		component: () =>
@@ -12,7 +12,8 @@ const routes = [
 			import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
 	},
 	{
-		path: '/id',
+		path: '/pokemon/:pokemonId',
+		name: 'pokemon-id',
 		component: () =>
 			import(/* webpackChunkName: "PokemonPage" */ '@/modules/pokemon/pages/PokemonPage.vue'),
 	},

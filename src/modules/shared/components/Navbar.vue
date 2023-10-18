@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<RouterLink to="/">Pokemon List</RouterLink>
-		<RouterLink to="/id">Pokemon by id</RouterLink>
+		<RouterLink to="/pokemon/id">Pokemon by id</RouterLink>
 		<RouterLink to="/about">About</RouterLink>
 	</div>
 </template>
