@@ -1,5 +1,8 @@
 <template>
 	<h1>Pokemon Page - ID: {{ id }}</h1>
+	<div v-if="pokemon">
+		<img :src="pokemon.sprites.front_default" :alt="pokemon.name" />
+	</div>
 </template>
 
 <script lang="ts">
