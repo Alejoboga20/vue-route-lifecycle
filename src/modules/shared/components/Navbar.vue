@@ -22,4 +22,8 @@ div a {
 	font-weight: bold;
 	margin: 10px;
 }
+
+a.router-link-exact-active {
+	color: #42b983;
+}
 </style>
