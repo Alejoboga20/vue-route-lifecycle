@@ -16,6 +16,11 @@ export default {
 			pokemon: null,
 		};
 	},
+	watch: {
+		id() {
+			this.getPokemon();
+		},
+	},
 	methods: {
 		async getPokemon() {
 			try {
