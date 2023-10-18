@@ -14,6 +14,13 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/pokemon/:pokemonId',
 		name: 'pokemon-id',
+		props: (route) => {
+			const id = Number(route.params.pokemonId);
+
+			if (isNaN(id)) return { id: 1 };
+
+			return { id };
+		},
 		component: () =>
 			import(/* webpackChunkName: "PokemonPage" */ '@/modules/pokemon/pages/PokemonPage.vue'),
 	},
