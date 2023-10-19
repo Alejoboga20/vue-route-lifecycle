@@ -3,11 +3,13 @@ import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-rou
 const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
+		name: 'home',
 		component: () =>
 			import(/* webpackChunkName: "ListPage" */ '@/modules/pokemon/pages/ListPage.vue'),
 	},
 	{
 		path: '/about',
+		name: 'about',
 		component: () =>
 			import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
 	},
@@ -26,6 +28,7 @@ const routes: RouteRecordRaw[] = [
 	},
 	{
 		path: '/:pathMatch(.*)*',
+		name: 'not-found',
 		component: () =>
 			import(/* webpackChunkName: "NotFoundPage" */ '@/modules/shared/pages/NotFoundPage.vue'),
 	},
