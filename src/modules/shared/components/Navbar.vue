@@ -1,14 +1,30 @@
 <template>
 	<div>
-		<RouterLink to="/">Pokemon List</RouterLink>
+		<!-- <RouterLink to="/">Pokemon List</RouterLink>
 		<RouterLink :to="{ name: 'pokemon-id', params: { pokemonId: 10 } }">Pokemon by id</RouterLink>
-		<RouterLink :to="{ name: 'about' }">About</RouterLink>
+		<RouterLink :to="{ name: 'about' }">About</RouterLink> -->
+		<CustomLink v-for="link in links" :key="link.to" :link="link" />
 	</div>
 </template>
 
 <script lang="ts">
+import { defineAsyncComponent } from 'vue';
+
 export default {
 	name: 'Navbar',
+	components: {
+		CustomLink: defineAsyncComponent(() => import('./CustomLink.vue')),
+	},
+	data() {
+		return {
+			links: [
+				{ to: '/', name: 'Pokemons' },
+				{ to: '/pokemon/50', name: 'By Id' },
+				{ to: '/about', name: 'About' },
+				{ to: 'https://google.com', name: 'Google' },
+			],
+		};
+	},
 };
 </script>
 
