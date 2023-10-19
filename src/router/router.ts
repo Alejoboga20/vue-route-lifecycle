@@ -18,13 +18,13 @@ const routes: RouteRecordRaw[] = [
 		children: [
 			{
 				path: '',
-				name: 'home',
+				name: 'pokemon-home',
 				component: () =>
 					import(/* webpackChunkName: "ListPage" */ '@/modules/pokemon/pages/ListPage.vue'),
 			},
 			{
 				path: 'about',
-				name: 'about',
+				name: 'pokemon-about',
 				component: () =>
 					import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
 			},
