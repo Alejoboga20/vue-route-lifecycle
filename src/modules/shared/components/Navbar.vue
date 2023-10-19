@@ -2,7 +2,7 @@
 	<div>
 		<RouterLink to="/">Pokemon List</RouterLink>
 		<RouterLink :to="{ name: 'pokemon-id', params: { pokemonId: 10 } }">Pokemon by id</RouterLink>
-		<RouterLink to="/about">About</RouterLink>
+		<RouterLink :to="{ name: 'about' }">About</RouterLink>
 	</div>
 </template>
 

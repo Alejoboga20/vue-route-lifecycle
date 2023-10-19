@@ -14,9 +14,8 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/about',
 		name: 'about',
-		redirect: { name: 'home' },
-		// component: () =>
-		// import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
+		component: () =>
+			import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
 	},
 	{
 		path: '/pokemon/:pokemonId',
