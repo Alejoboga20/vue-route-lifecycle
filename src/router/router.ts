@@ -3,6 +3,10 @@ import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-rou
 const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
+		redirect: { name: 'home' },
+	},
+	{
+		path: '/home',
 		name: 'home',
 		component: () =>
 			import(/* webpackChunkName: "ListPage" */ '@/modules/pokemon/pages/ListPage.vue'),
@@ -10,8 +14,9 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/about',
 		name: 'about',
-		component: () =>
-			import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
+		redirect: { name: 'home' },
+		// component: () =>
+		// import(/* webpackChunkName: "AboutPage" */ '@/modules/pokemon/pages/AboutPage.vue'),
 	},
 	{
 		path: '/pokemon/:pokemonId',
